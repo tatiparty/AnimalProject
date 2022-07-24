@@ -1,4 +1,4 @@
-package com.selenium.Animals;
+package com.selenium.animals;
 
 public abstract class Animals {
 
@@ -63,7 +63,7 @@ public abstract class Animals {
         } else if ( age == 1 || remain == 1) {
             return "Привет! меня зовут " + name + ", мне " + age + " год, я вешу "
                     + weight + " кг, мой цвет - " + color;
-        } else if ( age == 2 || age == 3 || age == 4 || remain == 2){
+        } else if ( age == 2 || age == 3 || age == 4 || remain == 2 || remain == 3 || remain == 4){
             return "Привет! меня зовут " + name + ", мне " + age + " года, я вешу "
                     + weight + " кг, мой цвет - " + color;
         } else {

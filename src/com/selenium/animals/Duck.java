@@ -1,4 +1,4 @@
-package com.selenium.Animals;
+package com.selenium.animals;
 
 public class Duck extends Animals implements Flying {
 
@@ -7,8 +7,6 @@ public class Duck extends Animals implements Flying {
         System.out.println("Я говорю КРЯ");
     }
 
-    public void Fly(){
-        System.out.println("Я лечу");
-    }
+    public void fly() { System.out.println("Я летаю"); }
 
 }

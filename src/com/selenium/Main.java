@@ -1,7 +1,7 @@
 package com.selenium;
 
-import com.selenium.Animals.*;
-import Options.Options;
+import com.selenium.animals.*;
+import options.Options;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -17,45 +17,42 @@ public class Main {
             System.out.println("Введите, какую команду из меню выполнить: add/list/exit");
             String choice = sc.next().toUpperCase().trim();
 
-            String option1 = Options.ADD.getOpt();
-            String option2 = Options.LIST.getOpt();
-            String option3 = Options.EXIT.getOpt();
-
-            boolean a = false;
+            String optionAdd = Options.ADD.getOpt();
+            String optionList = Options.LIST.getOpt();
+            String optionExit = Options.EXIT.getOpt();
 
             switch (choice){
                 case "ADD":
-                    while(a = true){
-                        if (choice.matches(option1)) {
+                    while(true){
+                        if (choice.matches(optionAdd)) {
                             System.out.println("Введите, какое животное добавить: кот/кошка/пёс/собака/утка. Или введите q для выхода из команды");
                             String animalType = sc.next();
                             if (animalType.matches("кот") || animalType.matches("кошка")) {
                                 Animals unit = new Cat();
-                                AddAnimal(unit, sc);
+                                addAnimal(unit, sc);
                                 animals.add(unit);
                                 break;
                             } else if (animalType.matches("собака") || animalType.matches("пес") || animalType.matches("пёс")) {
                                 Animals unit = new Dog();
-                                AddAnimal(unit, sc);
+                                addAnimal(unit, sc);
                                 animals.add(unit);
                                 break;
                             } else if (animalType.matches("утка")) {
                                 Animals unit = new Duck();
-                                AddAnimal(unit, sc);
+                                addAnimal(unit, sc);
                                 animals.add(unit);
                                 Flying f = new Duck();
-                                f.Fly();
+                                f.fly();
                                 break;
                             } else if (animalType.matches("q")){
                                 break;
                             } else {
                                 System.out.println("Некорректный ввод");
-                                a = true;
                             }
                         }
                     }
                 case "LIST":
-                    if(choice.matches(option1) || choice.matches(option2)) {
+                    if(choice.matches(optionAdd) || choice.matches(optionList)) {
                         if (animals.size() == 0) {
                             System.out.println("В список пока не было добавлено ни одного животного");
                         } else {
@@ -67,7 +64,7 @@ public class Main {
                         break;
                     }
                 case "EXIT":
-                    if(choice.matches(option3)) {
+                    if(choice.matches(optionExit)) {
                         System.out.println("Выход");
                         System.exit(0);
                     }
@@ -76,7 +73,7 @@ public class Main {
             }
         }
     }
-    public static void CreateAnimal(Animals animal, Scanner scanner){
+    public static void createAnimal(Animals animal, Scanner scanner){
 
         System.out.println("Введите имя животного");
         animal.setName(scanner.next());
@@ -110,8 +107,8 @@ public class Main {
         System.out.println("Введите цвет животного");
         animal.setColor(scanner.next());
     }
-    public static void AddAnimal(Animals unit, Scanner sc){
-        CreateAnimal(unit, sc);
+    public static void addAnimal(Animals unit, Scanner sc){
+        createAnimal(unit, sc);
         unit.say();
     }
 }

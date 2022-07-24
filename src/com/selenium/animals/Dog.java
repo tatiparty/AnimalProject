@@ -1,4 +1,4 @@
-package com.selenium.Animals;
+package com.selenium.animals;
 
 public class Dog extends Animals {
 
