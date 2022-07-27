@@ -1,6 +1,10 @@
 package com.selenium;
 
 import com.selenium.animals.*;
+import com.selenium.animals.birds.Duck;
+import com.selenium.animals.birds.Flying;
+import com.selenium.animals.pets.Cat;
+import com.selenium.animals.pets.Dog;
 import options.Options;
 import java.util.ArrayList;
 import java.util.Scanner;

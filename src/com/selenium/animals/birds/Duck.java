@@ -1,4 +1,6 @@
-package com.selenium.animals;
+package com.selenium.animals.birds;
+
+import com.selenium.animals.Animals;
 
 public class Duck extends Animals implements Flying {
 

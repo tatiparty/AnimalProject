@@ -1,4 +1,6 @@
-package com.selenium.animals;
+package com.selenium.animals.pets;
+
+import com.selenium.animals.Animals;
 
 public class Dog extends Animals {
 
